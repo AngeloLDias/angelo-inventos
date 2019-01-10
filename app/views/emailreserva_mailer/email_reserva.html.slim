@@ -1,0 +1,35 @@
+/ div
+/   ul
+/     li 
+/       nome: = @reser.fname
+/     li 
+/       nome: = @reser.lnome
+
+
+/ <div>
+/   <ul>
+/     <li>nome: <%= @reser.fname %></li>
+/     <li>nome: <%= @reser.lnome %></li>
+/     <li>nome: <%= @reser.email %></li>
+/     <li>nome: <%= @reser.phone %></li>
+/     <li>nome: <%= @reser.address %></li>
+/   </ul>
+/ </div>
+
+div
+  ul
+    li
+      | nome: 
+      = @reser.fname
+    li
+      | nome: 
+      = @reser.lnome
+    li
+      | nome: 
+      = @reser.email
+    li
+      | nome: 
+      = @reser.phone
+    li
+      | nome: 
+      = @reser.address

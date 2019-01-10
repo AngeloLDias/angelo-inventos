@@ -1,0 +1,29 @@
+h1 Listing resers
+
+table
+  thead
+    tr
+      th Fname
+      th Lnome
+      th Email
+      th Phone
+      th Address
+      th
+      th
+      th
+
+  tbody
+    - @resers.each do |reser|
+      tr
+        td = reser.fname
+        td = reser.lnome
+        td = reser.email
+        td = reser.phone
+        td = reser.address
+        td = link_to 'Show', reser
+        td = link_to 'Edit', edit_reser_path(reser)
+        td = link_to 'Destroy', reser, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Reser', new_reser_path

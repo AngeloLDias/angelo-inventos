@@ -1,0 +1,26 @@
+
+doctype html
+html lang="pt-br"
+  head
+    title
+      | InventosAngelo
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    meta content="width=device-width, initial-scale=1.0" name="viewport" /
+  body
+    section id="main"
+      header
+          nav
+            ul
+              li= link_to 'HOME', welcome_index_path          
+            - if user_signed_in?
+              ul
+                li= link_to 'LOGOUT', destroy_user_session_path, method: :delete
+            - else
+              ul
+                li= link_to 'LOGIN', user_session_path
+                h1 l
+                li= link_to 'REGISTER', new_user_registration_path
+    = yield

@@ -1,0 +1,17 @@
+development:
+  adapter: async
+  # postmark_api_token: "7f47a82f-3d0f-4880-a23f-4162b8ef40a6"
+  # secret_key_base: 7f47a82f-3d0f-4880-a23f-4162b8ef40a6
+
+
+test:
+  adapter: async
+  # postmark_api_token: "7f47a82f-3d0f-4880-a23f-4162b8ef40a6"
+  # secret_key_base: 7f47a82f-3d0f-4880-a23f-4162b8ef40a6
+  
+production:
+  adapter: redis
+  url: <%= ENV.fetch("REDIS_URL") { "redis://localhost:6379/1" } %>
+  channel_prefix: inventos-angelo_production
+  # postmark_api_token: "7f47a82f-3d0f-4880-a23f-4162b8ef40a6"
+  # secret_key_base: 7f47a82f-3d0f-4880-a23f-4162b8ef40a6

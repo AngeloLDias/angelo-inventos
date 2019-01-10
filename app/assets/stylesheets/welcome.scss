@@ -1,0 +1,51 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.back-black {
+    background-color: #000000;
+}
+
+.welcome {
+    // background-color: rgba($color: #000000, $alpha: 0.4);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba($color: #000000, $alpha: 0.5);
+    background-image: url('https://uploaddeimagens.com.br/images/001/825/620/full/CTz0TwM.jpg?1547116593');
+    // background-image: url('../images/CTz0TwM.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    .boceco-minion {
+        img {
+            width: 250px;
+        }
+    }
+
+    .btn-reserve {
+        // border: 2px solid #fff;
+        background-color: #E2001A;
+        padding: 20px 32px;
+        // border-radius: 20px;
+        cursor: pointer;
+        border-radius: 4px;
+
+
+        // &:hover {
+        //     background-color: rgba($color: #fff, $alpha: 0.5);
+        //     transition: 1s;
+        // }
+
+        h1 {
+            a {
+                color: #fff;
+            }
+        }
+    }
+}
+

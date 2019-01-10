@@ -1,0 +1,25 @@
+= form_for @reser do |f|
+  - if @reser.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@reser.errors.count, "error")} prohibited this reser from being saved:"
+      ul
+        - @reser.errors.full_messages.each do |message|
+          li = message
+
+  .field.inputForm
+    = f.label :Nome
+    = f.text_field :fname
+  .field.inputForm
+    = f.label :Sobrenome
+    = f.text_field :lnome
+  .field.inputForm
+    = f.label :Email
+    
+    = f.text_field :email
+  .field.inputForm
+    = f.label :Telefone
+    = f.text_field :phone
+  .field.inputForm
+    = f.label :Endereço 
+    = f.text_field :address 
+  .actions.btn-reserve = f.submit value="RESEVAR"
