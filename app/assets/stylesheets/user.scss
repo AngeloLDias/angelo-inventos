@@ -20,7 +20,10 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-
+        a{
+            color: white;
+            font-size: 17px;
+            font-weight: bold;        }
         form {
             display: flex;
             flex-direction: column;
@@ -45,6 +48,9 @@
                     color: white;
                     padding-left: 0px;
                 }
+                a{
+                    color: white !important;
+                }
             }
 
             input {
@@ -59,9 +65,14 @@
         }
     }
 }
-
+.links{
+    a{
+        color: white;
+    }
+}
 @media screen and (max-width: 758px) {
     .login{
         // align-items: flex-end;
     }
 }
+

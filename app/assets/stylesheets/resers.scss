@@ -7,15 +7,8 @@
     margin: 0;
 }
 
-// html {
-//     height: 100%;
-//     width: 100%;
-// }
-
 #main {
     background-color: #2970CD;
-    // height: 100%;
-    // width: 100%;
 
     header {
         width: 100%;
@@ -99,6 +92,8 @@
 
 
             .inputForm {
+                font-size: 18px;
+
                 input {
                     width: 217px;
                     height: 32px;
@@ -108,7 +103,6 @@
                     padding-left: 16px;
                     margin: 6px 0px;
                 }
-
             }
 
             .btn-reserve {
@@ -151,6 +145,46 @@
         }
 
 
+    }
+}
+
+// show reserve
+
+.confirm-reserve {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+
+    div {
+        margin: 10px 0;
+
+        .text-btn {
+            text-align: center;
+            color: green;
+            font-size: 34px;
+            font-weight: 100
+        }
+        h1{
+            text-align: center;
+            color: white;
+            font-size: 24px;
+            font-weight: 100
+        }
+    }
+
+    .btn-reserve {
+        background-color: #E2001A;
+        padding: 10px 28px;
+        cursor: pointer;
+        border-radius: 4px;
+
+        h1 {
+            a {
+                color: #fff;
+            }
+        }
     }
 }
 

@@ -18071,3 +18071,1954 @@ Processing by ResersController#show as HTML
 Completed 200 OK in 122ms (Views: 111.1ms | ActiveRecord: 1.5ms)
 
 
+Started GET "/" for 127.0.0.1 at 2019-01-10 21:01:35 -0200
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.slim within layouts/application
+  Rendered welcome/index.html.slim within layouts/application (11.4ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.slim:18
+Completed 200 OK in 460ms (Views: 446.2ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-10 21:03:57 -0200
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.slim within layouts/application
+  Rendered welcome/index.html.slim within layouts/application (8.8ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.slim:18
+Completed 200 OK in 287ms (Views: 276.3ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/resers/new" for 127.0.0.1 at 2019-01-10 21:03:59 -0200
+Processing by ResersController#new as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering resers/new.html.slim within layouts/application
+  Rendered resers/_form.html.slim (10.9ms)
+  Rendered resers/new.html.slim within layouts/application (16.7ms)
+Completed 200 OK in 91ms (Views: 45.4ms | ActiveRecord: 10.2ms)
+
+
+Started POST "/resers" for 127.0.0.1 at 2019-01-10 21:04:09 -0200
+Processing by ResersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"T2AyYWHQU4sOMBg8gZsWNLX6oXQJCv68PPzyXtH3zBs3ECzoKJN+03wLHWlZ85EJwVHlVA7OaGFsPLSqfI/kaQ==", "reser"=>{"fname"=>" Sobrenomeas", "lnome"=>"sdasd", "email"=>"", "phone"=>"", "address"=>""}, "commit"=>"RESEVAR"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/resers_controller.rb:49
+  [1m[36mReser Create (85.7ms)[0m  [1m[32mINSERT INTO "resers" ("fname", "lnome", "email", "phone", "address", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["fname", " Sobrenomeas"], ["lnome", "sdasd"], ["email", ""], ["phone", ""], ["address", ""], ["created_at", "2019-01-10 23:04:09.481766"], ["updated_at", "2019-01-10 23:04:09.481766"]]
+  ↳ app/controllers/resers_controller.rb:49
+  [1m[35m (26.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/resers_controller.rb:49
+  Rendering emailreserva_mailer/email_reserva.html.slim within layouts/mailer
+  Rendered emailreserva_mailer/email_reserva.html.slim within layouts/mailer (5.5ms)
+EmailreservaMailer#email_reserva: processed outbound mail in 31.7ms
+Sent mail to angelolimadias@gmail.com (10009.9ms)
+Date: Thu, 10 Jan 2019 21:04:09 -0200
+From: forimek@2mailnext.top
+To: angelolimadias@gmail.com
+Message-ID: <5c37cf69bb738_335b2af006be8d9c45744@angelo-Aspire-A515-51.mail>
+Subject: contato recebido
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <div><ul><li>nome:  Sobrenomeas</li><li>nome: sdasd</li><li>nome: </li><li>nome: </li><li>nome: </li></ul></div>
+  </body>
+</html>
+
+Redirected to http://localhost:3000/resers/31
+Completed 302 Found in 10314ms (ActiveRecord: 114.1ms)
+
+
+Started GET "/resers/31" for 127.0.0.1 at 2019-01-10 21:04:19 -0200
+Processing by ResersController#show as HTML
+  Parameters: {"id"=>"31"}
+  [1m[36mReser Load (0.4ms)[0m  [1m[34mSELECT  "resers".* FROM "resers" WHERE "resers"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/resers_controller.rb:87
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering resers/show.html.slim within layouts/application
+  Rendered resers/show.html.slim within layouts/application (3.2ms)
+Completed 200 OK in 38ms (Views: 29.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/resers/31" for 127.0.0.1 at 2019-01-10 21:08:30 -0200
+Processing by ResersController#show as HTML
+  Parameters: {"id"=>"31"}
+  [1m[36mReser Load (0.5ms)[0m  [1m[34mSELECT  "resers".* FROM "resers" WHERE "resers"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/resers_controller.rb:87
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering resers/show.html.slim within layouts/application
+  Rendered resers/show.html.slim within layouts/application (2.8ms)
+Completed 200 OK in 129ms (Views: 123.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2019-01-10 21:25:47 -0200
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.slim within layouts/application
+  Rendered welcome/index.html.slim within layouts/application (3.9ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.slim:18
+Completed 200 OK in 39ms (Views: 34.7ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/" for 192.168.0.108 at 2019-01-11 12:24:00 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.slim within layouts/application
+  Rendered welcome/index.html.slim within layouts/application (14.7ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.slim:18
+Completed 200 OK in 824ms (Views: 807.3ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/resers/new" for 192.168.0.108 at 2019-01-11 12:24:07 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ResersController#new as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering resers/new.html.slim within layouts/application
+  Rendered resers/_form.html.slim (71.2ms)
+  Rendered resers/new.html.slim within layouts/application (81.4ms)
+Completed 200 OK in 254ms (Views: 124.0ms | ActiveRecord: 10.6ms)
+
+
+Started POST "/resers" for 192.168.0.108 at 2019-01-11 12:24:18 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ResersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ayfUz6ow+J8MCh3Xz71QmSnepfoYRsY6hTjzxRpMn5SCgtjWwMbsQN/AhyxcpEZIV4qvJ7zN9BdWBg0Ai9vJKg==", "reser"=>{"fname"=>"", "lnome"=>"", "email"=>"", "phone"=>"", "address"=>""}, "commit"=>"RESEVAR"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/resers_controller.rb:49
+  [1m[36mReser Create (1.6ms)[0m  [1m[32mINSERT INTO "resers" ("fname", "lnome", "email", "phone", "address", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["fname", ""], ["lnome", ""], ["email", ""], ["phone", ""], ["address", ""], ["created_at", "2019-01-11 14:24:18.681643"], ["updated_at", "2019-01-11 14:24:18.681643"]]
+  ↳ app/controllers/resers_controller.rb:49
+  [1m[35m (41.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/resers_controller.rb:49
+  Rendering emailreserva_mailer/email_reserva.html.slim within layouts/mailer
+  Rendered emailreserva_mailer/email_reserva.html.slim within layouts/mailer (7.3ms)
+EmailreservaMailer#email_reserva: processed outbound mail in 54.8ms
+Sent mail to angelolimadias@gmail.com (7353.2ms)
+Date: Fri, 11 Jan 2019 12:24:19 -0200
+From: forimek@2mailnext.top
+To: angelolimadias@gmail.com
+Message-ID: <5c38a7134fa1_4fac2b003be9346c9873e@angelo-Aspire-A515-51.mail>
+Subject: contato recebido
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <div><ul><li>nome: </li><li>nome: </li><li>nome: </li><li>nome: </li><li>nome: </li></ul></div>
+  </body>
+</html>
+
+Redirected to http://192.168.0.108:3000/resers/32
+Completed 302 Found in 7702ms (ActiveRecord: 44.9ms)
+
+
+Started GET "/resers/32" for 192.168.0.108 at 2019-01-11 12:24:26 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ResersController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mReser Load (0.3ms)[0m  [1m[34mSELECT  "resers".* FROM "resers" WHERE "resers"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/resers_controller.rb:87
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering resers/show.html.slim within layouts/application
+  Rendered resers/show.html.slim within layouts/application (3.5ms)
+Completed 200 OK in 49ms (Views: 42.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/resers/32" for 192.168.0.108 at 2019-01-11 12:26:18 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ResersController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mReser Load (0.7ms)[0m  [1m[34mSELECT  "resers".* FROM "resers" WHERE "resers"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/resers_controller.rb:87
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering resers/show.html.slim within layouts/application
+  Rendered resers/show.html.slim within layouts/application (9.6ms)
+Completed 200 OK in 119ms (Views: 104.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/resers/32" for 192.168.0.108 at 2019-01-11 12:26:36 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ResersController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mReser Load (2.0ms)[0m  [1m[34mSELECT  "resers".* FROM "resers" WHERE "resers"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/resers_controller.rb:87
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering resers/show.html.slim within layouts/application
+  Rendered resers/show.html.slim within layouts/application (7.6ms)
+Completed 200 OK in 135ms (Views: 119.5ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/resers/32" for 192.168.0.108 at 2019-01-11 12:27:49 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ResersController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mReser Load (0.6ms)[0m  [1m[34mSELECT  "resers".* FROM "resers" WHERE "resers"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/resers_controller.rb:87
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering resers/show.html.slim within layouts/application
+  Rendered resers/show.html.slim within layouts/application (3.2ms)
+Completed 200 OK in 88ms (Views: 81.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/resers/32" for 192.168.0.108 at 2019-01-11 12:29:04 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ResersController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mReser Load (0.3ms)[0m  [1m[34mSELECT  "resers".* FROM "resers" WHERE "resers"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/resers_controller.rb:87
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering resers/show.html.slim within layouts/application
+  Rendered resers/show.html.slim within layouts/application (2.3ms)
+Completed 200 OK in 36ms (Views: 31.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/resers/32" for 192.168.0.108 at 2019-01-11 12:29:15 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ResersController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mReser Load (0.9ms)[0m  [1m[34mSELECT  "resers".* FROM "resers" WHERE "resers"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/resers_controller.rb:87
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering resers/show.html.slim within layouts/application
+  Rendered resers/show.html.slim within layouts/application (4.8ms)
+Completed 200 OK in 61ms (Views: 48.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/resers/32" for 192.168.0.108 at 2019-01-11 12:30:07 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ResersController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mReser Load (0.8ms)[0m  [1m[34mSELECT  "resers".* FROM "resers" WHERE "resers"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/resers_controller.rb:87
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering resers/show.html.slim within layouts/application
+  Rendered resers/show.html.slim within layouts/application (10.4ms)
+Completed 200 OK in 72ms (Views: 57.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/resers/32" for 192.168.0.108 at 2019-01-11 12:32:35 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ResersController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mReser Load (0.5ms)[0m  [1m[34mSELECT  "resers".* FROM "resers" WHERE "resers"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/resers_controller.rb:87
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering resers/show.html.slim within layouts/application
+  Rendered resers/show.html.slim within layouts/application (2.8ms)
+Completed 200 OK in 39ms (Views: 35.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/resers/32" for 192.168.0.108 at 2019-01-11 12:32:36 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ResersController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mReser Load (0.5ms)[0m  [1m[34mSELECT  "resers".* FROM "resers" WHERE "resers"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/resers_controller.rb:87
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering resers/show.html.slim within layouts/application
+  Rendered resers/show.html.slim within layouts/application (4.0ms)
+Completed 200 OK in 50ms (Views: 45.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/resers/32" for 192.168.0.108 at 2019-01-11 12:36:09 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ResersController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mReser Load (0.3ms)[0m  [1m[34mSELECT  "resers".* FROM "resers" WHERE "resers"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/resers_controller.rb:87
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering resers/show.html.slim within layouts/application
+  Rendered resers/show.html.slim within layouts/application (3.4ms)
+Completed 200 OK in 171ms (Views: 166.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/resers/32" for 192.168.0.108 at 2019-01-11 12:36:10 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ResersController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mReser Load (0.7ms)[0m  [1m[34mSELECT  "resers".* FROM "resers" WHERE "resers"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/resers_controller.rb:87
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering resers/show.html.slim within layouts/application
+  Rendered resers/show.html.slim within layouts/application (11.7ms)
+Completed 200 OK in 85ms (Views: 70.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/resers/32" for 192.168.0.108 at 2019-01-11 12:36:50 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ResersController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mReser Load (0.2ms)[0m  [1m[34mSELECT  "resers".* FROM "resers" WHERE "resers"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/resers_controller.rb:87
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering resers/show.html.slim within layouts/application
+  Rendered resers/show.html.slim within layouts/application (3.3ms)
+Completed 200 OK in 73ms (Views: 68.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/resers/32" for 192.168.0.108 at 2019-01-11 12:37:18 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ResersController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mReser Load (0.2ms)[0m  [1m[34mSELECT  "resers".* FROM "resers" WHERE "resers"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/resers_controller.rb:87
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering resers/show.html.slim within layouts/application
+  Rendered resers/show.html.slim within layouts/application (3.0ms)
+Completed 200 OK in 34ms (Views: 30.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/resers/32" for 192.168.0.108 at 2019-01-11 12:37:59 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ResersController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mReser Load (0.5ms)[0m  [1m[34mSELECT  "resers".* FROM "resers" WHERE "resers"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/resers_controller.rb:87
+  [1m[36mUser Load (4.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering resers/show.html.slim within layouts/application
+  Rendered resers/show.html.slim within layouts/application (5.2ms)
+Completed 200 OK in 92ms (Views: 79.7ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/resers/32" for 192.168.0.108 at 2019-01-11 12:38:28 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ResersController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mReser Load (0.2ms)[0m  [1m[34mSELECT  "resers".* FROM "resers" WHERE "resers"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/resers_controller.rb:87
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering resers/show.html.slim within layouts/application
+  Rendered resers/show.html.slim within layouts/application (2.7ms)
+Completed 200 OK in 96ms (Views: 91.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/resers/32" for 192.168.0.108 at 2019-01-11 12:40:23 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ResersController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mReser Load (0.7ms)[0m  [1m[34mSELECT  "resers".* FROM "resers" WHERE "resers"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/resers_controller.rb:87
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering resers/show.html.slim within layouts/application
+  Rendered resers/show.html.slim within layouts/application (4.5ms)
+Completed 200 OK in 47ms (Views: 35.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/resers/32" for 192.168.0.108 at 2019-01-11 12:42:14 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ResersController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mReser Load (0.9ms)[0m  [1m[34mSELECT  "resers".* FROM "resers" WHERE "resers"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/resers_controller.rb:87
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering resers/show.html.slim within layouts/application
+  Rendered resers/show.html.slim within layouts/application (4.1ms)
+Completed 200 OK in 407ms (Views: 399.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/resers/32" for 192.168.0.108 at 2019-01-11 12:42:49 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ResersController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mReser Load (2.3ms)[0m  [1m[34mSELECT  "resers".* FROM "resers" WHERE "resers"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/resers_controller.rb:87
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering resers/show.html.slim within layouts/application
+  Rendered resers/show.html.slim within layouts/application (3.0ms)
+Completed 200 OK in 159ms (Views: 138.4ms | ActiveRecord: 11.7ms)
+
+
+Started GET "/resers/32" for 192.168.0.108 at 2019-01-11 12:43:47 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ResersController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mReser Load (1.6ms)[0m  [1m[34mSELECT  "resers".* FROM "resers" WHERE "resers"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/resers_controller.rb:87
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering resers/show.html.slim within layouts/application
+  Rendered resers/show.html.slim within layouts/application (5.6ms)
+Completed 200 OK in 70ms (Views: 53.5ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/resers/32" for 192.168.0.108 at 2019-01-11 12:43:48 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ResersController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mReser Load (1.3ms)[0m  [1m[34mSELECT  "resers".* FROM "resers" WHERE "resers"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/resers_controller.rb:87
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering resers/show.html.slim within layouts/application
+  Rendered resers/show.html.slim within layouts/application (12.5ms)
+Completed 200 OK in 78ms (Views: 63.8ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/resers/32" for 192.168.0.108 at 2019-01-11 12:43:48 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ResersController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mReser Load (0.4ms)[0m  [1m[34mSELECT  "resers".* FROM "resers" WHERE "resers"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/resers_controller.rb:87
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering resers/show.html.slim within layouts/application
+  Rendered resers/show.html.slim within layouts/application (4.6ms)
+Completed 200 OK in 54ms (Views: 47.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/rails/info/routes" for 192.168.0.108 at 2019-01-11 12:44:28 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::InfoController#routes as HTML
+  Rendering /home/angelo/.rvm/gems/ruby-2.4.4/gems/railties-5.2.2/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /home/angelo/.rvm/gems/ruby-2.4.4/gems/actionpack-5.2.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [32 times] (102.6ms)
+  Rendered /home/angelo/.rvm/gems/ruby-2.4.4/gems/actionpack-5.2.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (48.7ms)
+  Rendered /home/angelo/.rvm/gems/ruby-2.4.4/gems/railties-5.2.2/lib/rails/templates/rails/info/routes.html.erb within layouts/application (402.7ms)
+Completed 200 OK in 541ms (Views: 447.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/resers/32" for 192.168.0.108 at 2019-01-11 12:44:52 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ResersController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mReser Load (1.2ms)[0m  [1m[34mSELECT  "resers".* FROM "resers" WHERE "resers"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/resers_controller.rb:87
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering resers/show.html.slim within layouts/application
+  Rendered resers/show.html.slim within layouts/application (14.8ms)
+Completed 200 OK in 100ms (Views: 83.8ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/resers/32" for 192.168.0.108 at 2019-01-11 12:44:53 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ResersController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mReser Load (0.7ms)[0m  [1m[34mSELECT  "resers".* FROM "resers" WHERE "resers"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/resers_controller.rb:87
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering resers/show.html.slim within layouts/application
+  Rendered resers/show.html.slim within layouts/application (3.8ms)
+Completed 200 OK in 45ms (Views: 39.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/welcome/index" for 192.168.0.108 at 2019-01-11 12:44:55 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.slim within layouts/application
+  Rendered welcome/index.html.slim within layouts/application (6.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.slim:18
+Completed 200 OK in 44ms (Views: 41.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/resers/new" for 192.168.0.108 at 2019-01-11 12:44:57 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ResersController#new as HTML
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering resers/new.html.slim within layouts/application
+  Rendered resers/_form.html.slim (12.9ms)
+  Rendered resers/new.html.slim within layouts/application (26.8ms)
+Completed 200 OK in 80ms (Views: 68.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/resers/new" for 192.168.0.108 at 2019-01-11 12:45:22 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ResersController#new as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering resers/new.html.slim within layouts/application
+  Rendered resers/_form.html.slim (8.1ms)
+  Rendered resers/new.html.slim within layouts/application (19.2ms)
+Completed 200 OK in 59ms (Views: 51.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/resers/new" for 192.168.0.108 at 2019-01-11 12:46:14 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ResersController#new as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering resers/new.html.slim within layouts/application
+  Rendered resers/_form.html.slim (7.6ms)
+  Rendered resers/new.html.slim within layouts/application (15.6ms)
+Completed 200 OK in 220ms (Views: 211.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/resers/new" for 192.168.0.108 at 2019-01-11 12:46:39 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ResersController#new as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering resers/new.html.slim within layouts/application
+  Rendered resers/_form.html.slim (7.3ms)
+  Rendered resers/new.html.slim within layouts/application (15.6ms)
+Completed 200 OK in 128ms (Views: 119.6ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/resers" for 192.168.0.108 at 2019-01-11 12:46:42 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ResersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LSYBfC8qTAM8uy7m2ge1anYdvjIMmityQ+nklzqVtaEAaXznMyhw0q5qG7yaiGacKh9uC9bwZHJyyj5kjqfSHA==", "reser"=>{"fname"=>"", "lnome"=>"", "email"=>"", "phone"=>"", "address"=>""}, "commit"=>"RESEVAR"}
+  [1m[36mUser Load (5.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/resers_controller.rb:49
+  [1m[36mReser Create (1.2ms)[0m  [1m[32mINSERT INTO "resers" ("fname", "lnome", "email", "phone", "address", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["fname", ""], ["lnome", ""], ["email", ""], ["phone", ""], ["address", ""], ["created_at", "2019-01-11 14:46:42.799497"], ["updated_at", "2019-01-11 14:46:42.799497"]]
+  ↳ app/controllers/resers_controller.rb:49
+  [1m[35m (98.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/resers_controller.rb:49
+  Rendering emailreserva_mailer/email_reserva.html.slim within layouts/mailer
+  Rendered emailreserva_mailer/email_reserva.html.slim within layouts/mailer (8.3ms)
+EmailreservaMailer#email_reserva: processed outbound mail in 35.5ms
+Sent mail to angelolimadias@gmail.com (2251.1ms)
+Date: Fri, 11 Jan 2019 12:46:42 -0200
+From: forimek@2mailnext.top
+To: angelolimadias@gmail.com
+Message-ID: <5c38ac52e669a_4fac2b003be93d909883a@angelo-Aspire-A515-51.mail>
+Subject: contato recebido
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <div><ul><li>nome: </li><li>nome: </li><li>nome: </li><li>nome: </li><li>nome: </li></ul></div>
+  </body>
+</html>
+
+Redirected to http://192.168.0.108:3000/resers/33
+Completed 302 Found in 2413ms (ActiveRecord: 106.0ms)
+
+
+Started GET "/resers/33" for 192.168.0.108 at 2019-01-11 12:46:45 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ResersController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mReser Load (0.3ms)[0m  [1m[34mSELECT  "resers".* FROM "resers" WHERE "resers"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/resers_controller.rb:87
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering resers/show.html.slim within layouts/application
+  Rendered resers/show.html.slim within layouts/application (2.7ms)
+Completed 200 OK in 34ms (Views: 30.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/welcome/index" for 192.168.0.108 at 2019-01-11 12:46:48 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.slim within layouts/application
+  Rendered welcome/index.html.slim within layouts/application (7.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.slim:18
+Completed 200 OK in 53ms (Views: 49.4ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/users/sign_out" for 192.168.0.108 at 2019-01-11 12:55:34 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"e8PKX10pzA3iKBR7xwQMVS2AEYr15oJ4chxOFqHuRdJWjLfEQSvw3HD5ISGHi9+jcYLBsy+MzXhDP5TlFdwibw=="}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://192.168.0.108:3000/
+Completed 302 Found in 60ms (ActiveRecord: 4.1ms)
+
+
+Started GET "/" for 192.168.0.108 at 2019-01-11 12:55:35 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.slim within layouts/application
+  Rendered welcome/index.html.slim within layouts/application (5.0ms)
+Completed 200 OK in 49ms (Views: 48.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/resers/new" for 192.168.0.108 at 2019-01-11 12:55:37 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ResersController#new as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 192.168.0.108 at 2019-01-11 12:55:37 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.slim within layouts/application
+  Rendered users/shared/_links.html.erb (1.4ms)
+  Rendered users/sessions/new.html.slim within layouts/application (45.3ms)
+Completed 200 OK in 115ms (Views: 104.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/resers/new" for 192.168.0.108 at 2019-01-11 12:57:41 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ResersController#new as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 192.168.0.108 at 2019-01-11 12:57:42 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.slim within layouts/application
+  Rendered users/shared/_links.html.erb (1.4ms)
+  Rendered users/sessions/new.html.slim within layouts/application (8.6ms)
+Completed 200 OK in 47ms (Views: 45.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 192.168.0.108 at 2019-01-11 12:58:03 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.slim within layouts/application
+  Rendered users/shared/_links.html.erb (2.2ms)
+  Rendered users/sessions/new.html.slim within layouts/application (23.8ms)
+Completed 200 OK in 108ms (Views: 104.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 192.168.0.108 at 2019-01-11 13:05:33 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.slim within layouts/application
+  Rendered users/shared/_links.html.erb (1.0ms)
+  Rendered users/sessions/new.html.slim within layouts/application (7.5ms)
+Completed 200 OK in 170ms (Views: 168.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 192.168.0.108 at 2019-01-11 13:05:34 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.slim within layouts/application
+  Rendered users/shared/_links.html.erb (1.1ms)
+  Rendered users/sessions/new.html.slim within layouts/application (12.3ms)
+Completed 200 OK in 45ms (Views: 41.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 192.168.0.108 at 2019-01-11 13:05:34 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.slim within layouts/application
+  Rendered users/shared/_links.html.erb (0.7ms)
+  Rendered users/sessions/new.html.slim within layouts/application (6.5ms)
+Completed 200 OK in 40ms (Views: 39.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 192.168.0.108 at 2019-01-11 13:05:34 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.slim within layouts/application
+  Rendered users/shared/_links.html.erb (1.5ms)
+  Rendered users/sessions/new.html.slim within layouts/application (12.3ms)
+Completed 200 OK in 52ms (Views: 50.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 192.168.0.108 at 2019-01-11 13:05:40 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.slim within layouts/application
+  Rendered users/shared/_links.html.erb (1.3ms)
+  Rendered users/sessions/new.html.slim within layouts/application (12.8ms)
+Completed 200 OK in 54ms (Views: 51.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 192.168.0.108 at 2019-01-11 13:05:40 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.slim within layouts/application
+  Rendered users/shared/_links.html.erb (2.3ms)
+  Rendered users/sessions/new.html.slim within layouts/application (37.5ms)
+Completed 200 OK in 118ms (Views: 114.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 192.168.0.108 at 2019-01-11 13:05:41 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.slim within layouts/application
+  Rendered users/shared/_links.html.erb (1.1ms)
+  Rendered users/sessions/new.html.slim within layouts/application (9.3ms)
+Completed 200 OK in 51ms (Views: 49.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 192.168.0.108 at 2019-01-11 13:05:41 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.slim within layouts/application
+  Rendered users/shared/_links.html.erb (1.1ms)
+  Rendered users/sessions/new.html.slim within layouts/application (10.0ms)
+Completed 200 OK in 60ms (Views: 58.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 192.168.0.108 at 2019-01-11 13:07:36 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.slim within layouts/application
+  Rendered users/shared/_links.html.erb (1.1ms)
+  Rendered users/sessions/new.html.slim within layouts/application (9.0ms)
+Completed 200 OK in 181ms (Views: 176.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 192.168.0.108 at 2019-01-11 13:07:37 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.slim within layouts/application
+  Rendered users/shared/_links.html.erb (2.0ms)
+  Rendered users/sessions/new.html.slim within layouts/application (21.6ms)
+Completed 200 OK in 99ms (Views: 96.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 192.168.0.108 at 2019-01-11 13:07:59 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.slim within layouts/application
+  Rendered users/shared/_links.html.erb (1.3ms)
+  Rendered users/sessions/new.html.slim within layouts/application (10.1ms)
+Completed 200 OK in 97ms (Views: 94.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 192.168.0.108 at 2019-01-11 13:08:00 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.slim within layouts/application
+  Rendered users/shared/_links.html.erb (1.2ms)
+  Rendered users/sessions/new.html.slim within layouts/application (6.8ms)
+Completed 200 OK in 43ms (Views: 41.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 192.168.0.108 at 2019-01-11 13:08:28 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.slim within layouts/application
+  Rendered users/shared/_links.html.erb (0.9ms)
+  Rendered users/sessions/new.html.slim within layouts/application (9.8ms)
+Completed 200 OK in 45ms (Views: 41.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 192.168.0.108 at 2019-01-11 13:08:48 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.slim within layouts/application
+  Rendered users/shared/_links.html.erb (1.0ms)
+  Rendered users/sessions/new.html.slim within layouts/application (17.1ms)
+Completed 200 OK in 93ms (Views: 89.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 192.168.0.108 at 2019-01-11 13:08:49 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.slim within layouts/application
+  Rendered users/shared/_links.html.erb (3.5ms)
+  Rendered users/sessions/new.html.slim within layouts/application (27.9ms)
+Completed 200 OK in 114ms (Views: 110.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 192.168.0.108 at 2019-01-11 13:09:50 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.slim within layouts/application
+  Rendered users/shared/_links.html.erb (0.9ms)
+  Rendered users/sessions/new.html.slim within layouts/application (12.8ms)
+Completed 200 OK in 150ms (Views: 146.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 192.168.0.108 at 2019-01-11 13:09:51 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.slim within layouts/application
+  Rendered users/shared/_links.html.erb (2.2ms)
+  Rendered users/sessions/new.html.slim within layouts/application (22.2ms)
+Completed 200 OK in 79ms (Views: 75.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 192.168.0.108 at 2019-01-11 13:10:46 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.slim within layouts/application
+  Rendered users/shared/_links.html.erb (0.9ms)
+  Rendered users/sessions/new.html.slim within layouts/application (10.4ms)
+Completed 200 OK in 50ms (Views: 46.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 192.168.0.108 at 2019-01-11 13:10:46 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.slim within layouts/application
+  Rendered users/shared/_links.html.erb (2.3ms)
+  Rendered users/sessions/new.html.slim within layouts/application (25.4ms)
+Completed 200 OK in 109ms (Views: 106.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 192.168.0.108 at 2019-01-11 13:10:47 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.slim within layouts/application
+  Rendered users/shared/_links.html.erb (1.3ms)
+  Rendered users/sessions/new.html.slim within layouts/application (12.1ms)
+Completed 200 OK in 57ms (Views: 55.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 192.168.0.108 at 2019-01-11 13:10:47 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.slim within layouts/application
+  Rendered users/shared/_links.html.erb (1.2ms)
+  Rendered users/sessions/new.html.slim within layouts/application (13.7ms)
+Completed 200 OK in 57ms (Views: 56.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 192.168.0.108 at 2019-01-11 13:11:39 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.slim within layouts/application
+  Rendered users/shared/_links.html.erb (1.1ms)
+  Rendered users/sessions/new.html.slim within layouts/application (10.7ms)
+Completed 200 OK in 84ms (Views: 81.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 192.168.0.108 at 2019-01-11 13:11:52 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.slim within layouts/application
+  Rendered users/shared/_links.html.erb (1.2ms)
+  Rendered users/sessions/new.html.slim within layouts/application (8.8ms)
+Completed 200 OK in 153ms (Views: 150.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 192.168.0.108 at 2019-01-11 13:12:06 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.slim within layouts/application
+  Rendered users/shared/_links.html.erb (1.1ms)
+  Rendered users/sessions/new.html.slim within layouts/application (8.8ms)
+Completed 200 OK in 88ms (Views: 82.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 192.168.0.108 at 2019-01-11 13:12:07 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.slim within layouts/application
+  Rendered users/shared/_links.html.erb (1.2ms)
+  Rendered users/sessions/new.html.slim within layouts/application (7.2ms)
+Completed 200 OK in 40ms (Views: 39.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 192.168.0.108 at 2019-01-11 13:12:20 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.slim within layouts/application
+  Rendered users/shared/_links.html.erb (1.0ms)
+  Rendered users/sessions/new.html.slim within layouts/application (10.1ms)
+Completed 200 OK in 54ms (Views: 50.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 192.168.0.108 at 2019-01-11 13:32:20 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.slim within layouts/application
+  Rendered users/shared/_links.html.erb (0.7ms)
+  Rendered users/sessions/new.html.slim within layouts/application (6.8ms)
+Completed 200 OK in 74ms (Views: 73.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 192.168.0.108 at 2019-01-11 13:32:29 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.slim within layouts/application
+  Rendered users/shared/_links.html.erb (1.0ms)
+  Rendered users/registrations/new.html.slim within layouts/application (7.3ms)
+Completed 200 OK in 68ms (Views: 66.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 192.168.0.108 at 2019-01-11 13:32:43 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.slim within layouts/application
+  Rendered users/shared/_links.html.erb (0.7ms)
+  Rendered users/registrations/new.html.slim within layouts/application (9.2ms)
+Completed 200 OK in 48ms (Views: 46.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 192.168.0.108 at 2019-01-11 13:32:49 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.slim within layouts/application
+  Rendered users/shared/_links.html.erb (3.1ms)
+  Rendered users/sessions/new.html.slim within layouts/application (27.9ms)
+Completed 200 OK in 102ms (Views: 98.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 192.168.0.108 at 2019-01-11 13:34:29 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IBSoc6M0/+8bocfZmGjf+ey+yiNmBfegGqxLKz63qJBEVIUd9uFk6zFuPCY3SLebwlfqyxKvo92H5xy1yHypzA==", "user"=>{"email"=>"forimek@2mailnext.top", "password"=>"[FILTERED]"}, "commit"=>"ENTRAR"}
+  [1m[36mUser Load (58.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "forimek@2mailnext.top"], ["LIMIT", 1]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://192.168.0.108:3000/resers/new
+Completed 302 Found in 596ms (ActiveRecord: 61.3ms)
+
+
+Started GET "/resers/new" for 192.168.0.108 at 2019-01-11 13:34:30 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ResersController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering resers/new.html.slim within layouts/application
+  Rendered resers/_form.html.slim (8.9ms)
+  Rendered resers/new.html.slim within layouts/application (15.7ms)
+Completed 200 OK in 55ms (Views: 51.1ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/resers" for 192.168.0.108 at 2019-01-11 13:34:51 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ResersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SXpkTtGMoVpmt58uSlCDuA2ERMoUD4wI5xz3QxyG9UqyYvahUt7bleP9LLD6euSUu+ZubyXmfvl1KM4aZo0PDA==", "reser"=>{"fname"=>"", "lnome"=>"", "email"=>"", "phone"=>"", "address"=>""}, "commit"=>"RESEVAR"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/resers_controller.rb:49
+  [1m[36mReser Create (132.7ms)[0m  [1m[32mINSERT INTO "resers" ("fname", "lnome", "email", "phone", "address", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["fname", ""], ["lnome", ""], ["email", ""], ["phone", ""], ["address", ""], ["created_at", "2019-01-11 15:34:51.388092"], ["updated_at", "2019-01-11 15:34:51.388092"]]
+  ↳ app/controllers/resers_controller.rb:49
+  [1m[35m (25.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/resers_controller.rb:49
+  Rendering emailreserva_mailer/email_reserva.html.slim within layouts/mailer
+  Rendered emailreserva_mailer/email_reserva.html.slim within layouts/mailer (4.0ms)
+EmailreservaMailer#email_reserva: processed outbound mail in 12.6ms
+Sent mail to angelolimadias@gmail.com (2081.1ms)
+Date: Fri, 11 Jan 2019 13:34:51 -0200
+From: forimek@2mailnext.top
+To: angelolimadias@gmail.com
+Message-ID: <5c38b79b897bd_4fac2b003be9346c989ce@angelo-Aspire-A515-51.mail>
+Subject: contato recebido
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <div><ul><li>nome: </li><li>nome: </li><li>nome: </li><li>nome: </li><li>nome: </li></ul></div>
+  </body>
+</html>
+
+Redirected to http://192.168.0.108:3000/resers/34
+Completed 302 Found in 2264ms (ActiveRecord: 159.6ms)
+
+
+Started GET "/resers/34" for 192.168.0.108 at 2019-01-11 13:34:53 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ResersController#show as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mReser Load (0.4ms)[0m  [1m[34mSELECT  "resers".* FROM "resers" WHERE "resers"."id" = $1 LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/resers_controller.rb:87
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering resers/show.html.slim within layouts/application
+  Rendered resers/show.html.slim within layouts/application (4.7ms)
+Completed 200 OK in 48ms (Views: 39.8ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/welcome/index" for 192.168.0.108 at 2019-01-11 13:34:58 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.slim within layouts/application
+  Rendered welcome/index.html.slim within layouts/application (13.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.slim:18
+Completed 200 OK in 109ms (Views: 104.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/resers/new" for 192.168.0.108 at 2019-01-11 13:38:00 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ResersController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering resers/new.html.slim within layouts/application
+  Rendered resers/_form.html.slim (17.8ms)
+  Rendered resers/new.html.slim within layouts/application (26.0ms)
+Completed 200 OK in 83ms (Views: 79.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/welcome/index" for 192.168.0.108 at 2019-01-11 13:38:45 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.slim within layouts/application
+  Rendered welcome/index.html.slim within layouts/application (7.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.slim:18
+Completed 200 OK in 53ms (Views: 48.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/resers/new" for 192.168.0.108 at 2019-01-11 13:38:47 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ResersController#new as HTML
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering resers/new.html.slim within layouts/application
+  Rendered resers/_form.html.slim (29.9ms)
+  Rendered resers/new.html.slim within layouts/application (48.2ms)
+Completed 200 OK in 128ms (Views: 116.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/welcome/index" for 192.168.0.108 at 2019-01-11 13:38:49 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.slim within layouts/application
+  Rendered welcome/index.html.slim within layouts/application (14.6ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.slim:18
+Completed 200 OK in 101ms (Views: 96.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/resers/new" for 192.168.0.108 at 2019-01-11 13:38:51 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ResersController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering resers/new.html.slim within layouts/application
+  Rendered resers/_form.html.slim (11.5ms)
+  Rendered resers/new.html.slim within layouts/application (18.2ms)
+Completed 200 OK in 61ms (Views: 57.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/welcome/index" for 192.168.0.108 at 2019-01-11 13:38:54 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.slim within layouts/application
+  Rendered welcome/index.html.slim within layouts/application (18.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.slim:18
+Completed 200 OK in 68ms (Views: 64.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/welcome/index" for 192.168.0.108 at 2019-01-11 13:46:06 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.slim within layouts/application
+  Rendered welcome/index.html.slim within layouts/application (5.2ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.slim:18
+Completed 200 OK in 100ms (Views: 94.3ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/welcome/index" for 192.168.0.108 at 2019-01-11 13:46:06 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.slim within layouts/application
+  Rendered welcome/index.html.slim within layouts/application (8.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.slim:18
+Completed 200 OK in 52ms (Views: 48.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/resers/new" for 192.168.0.108 at 2019-01-11 13:46:08 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ResersController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering resers/new.html.slim within layouts/application
+  Rendered resers/_form.html.slim (9.2ms)
+  Rendered resers/new.html.slim within layouts/application (15.1ms)
+Completed 200 OK in 56ms (Views: 49.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/welcome/index" for 192.168.0.108 at 2019-01-11 13:46:11 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.slim within layouts/application
+  Rendered welcome/index.html.slim within layouts/application (7.8ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.slim:18
+Completed 200 OK in 59ms (Views: 54.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/welcome/index" for 192.168.0.108 at 2019-01-11 13:48:01 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.slim within layouts/application
+  Rendered welcome/index.html.slim within layouts/application (14.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.slim:18
+Completed 200 OK in 146ms (Views: 142.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/welcome/index" for 192.168.0.108 at 2019-01-11 13:48:46 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.slim within layouts/application
+  Rendered welcome/index.html.slim within layouts/application (11.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.slim:18
+Completed 200 OK in 82ms (Views: 78.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/welcome/index" for 192.168.0.108 at 2019-01-11 13:49:06 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.slim within layouts/application
+  Rendered welcome/index.html.slim within layouts/application (3.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.slim:18
+Completed 200 OK in 148ms (Views: 146.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/welcome/index" for 192.168.0.108 at 2019-01-11 14:05:41 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.slim within layouts/application
+  Rendered welcome/index.html.slim within layouts/application (17.7ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.slim:18
+Completed 200 OK in 222ms (Views: 213.8ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/resers/new" for 192.168.0.108 at 2019-01-11 14:05:53 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ResersController#new as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering resers/new.html.slim within layouts/application
+  Rendered resers/_form.html.slim (9.3ms)
+  Rendered resers/new.html.slim within layouts/application (17.5ms)
+Completed 200 OK in 63ms (Views: 53.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/resers/new" for 192.168.0.108 at 2019-01-11 14:07:36 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ResersController#new as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering resers/new.html.slim within layouts/application
+  Rendered resers/_form.html.slim (10.1ms)
+  Rendered resers/new.html.slim within layouts/application (17.3ms)
+Completed 200 OK in 112ms (Views: 102.1ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/resers" for 192.168.0.108 at 2019-01-11 14:07:41 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ResersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BHSh28UVjKEiCc7jCLVOjLyNcxoQK2XiZTl7UoQ3Kw3/bDM0Rkf2bqdDfX24nymgCu9ZvyHClxP3DUIL/jzRSw==", "reser"=>{"fname"=>"", "lnome"=>"", "email"=>"", "phone"=>"", "address"=>""}, "commit"=>"RESEVAR"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/resers_controller.rb:49
+  [1m[36mReser Create (1.9ms)[0m  [1m[32mINSERT INTO "resers" ("fname", "lnome", "email", "phone", "address", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["fname", ""], ["lnome", ""], ["email", ""], ["phone", ""], ["address", ""], ["created_at", "2019-01-11 16:07:41.051790"], ["updated_at", "2019-01-11 16:07:41.051790"]]
+  ↳ app/controllers/resers_controller.rb:49
+  [1m[35m (24.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/resers_controller.rb:49
+  Rendering emailreserva_mailer/email_reserva.html.slim within layouts/mailer
+  Rendered emailreserva_mailer/email_reserva.html.slim within layouts/mailer (5.3ms)
+EmailreservaMailer#email_reserva: processed outbound mail in 20.1ms
+Sent mail to angelolimadias@gmail.com (2011.1ms)
+Date: Fri, 11 Jan 2019 14:07:41 -0200
+From: forimek@2mailnext.top
+To: angelolimadias@gmail.com
+Message-ID: <5c38bf4d19e21_4fac2b003be9346c9901e@angelo-Aspire-A515-51.mail>
+Subject: contato recebido
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <div><ul><li>nome: </li><li>nome: </li><li>nome: </li><li>nome: </li><li>nome: </li></ul></div>
+  </body>
+</html>
+
+Redirected to http://192.168.0.108:3000/resers/35
+Completed 302 Found in 2083ms (ActiveRecord: 28.5ms)
+
+
+Started GET "/resers/35" for 192.168.0.108 at 2019-01-11 14:07:43 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ResersController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mReser Load (0.2ms)[0m  [1m[34mSELECT  "resers".* FROM "resers" WHERE "resers"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/resers_controller.rb:87
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering resers/show.html.slim within layouts/application
+  Rendered resers/show.html.slim within layouts/application (3.5ms)
+Completed 200 OK in 37ms (Views: 30.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/resers/35" for 192.168.0.108 at 2019-01-11 14:11:13 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ResersController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mReser Load (0.8ms)[0m  [1m[34mSELECT  "resers".* FROM "resers" WHERE "resers"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/resers_controller.rb:87
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering resers/show.html.slim within layouts/application
+  Rendered resers/show.html.slim within layouts/application (16.1ms)
+Completed 200 OK in 179ms (Views: 165.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/resers/35" for 192.168.0.108 at 2019-01-11 14:11:14 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ResersController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mReser Load (0.7ms)[0m  [1m[34mSELECT  "resers".* FROM "resers" WHERE "resers"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/resers_controller.rb:87
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering resers/show.html.slim within layouts/application
+  Rendered resers/show.html.slim within layouts/application (5.1ms)
+Completed 200 OK in 44ms (Views: 33.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/resers/35" for 192.168.0.108 at 2019-01-11 14:11:14 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ResersController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mReser Load (0.3ms)[0m  [1m[34mSELECT  "resers".* FROM "resers" WHERE "resers"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/resers_controller.rb:87
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering resers/show.html.slim within layouts/application
+  Rendered resers/show.html.slim within layouts/application (2.9ms)
+Completed 200 OK in 45ms (Views: 41.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/resers/35" for 192.168.0.108 at 2019-01-11 14:11:15 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ResersController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mReser Load (0.3ms)[0m  [1m[34mSELECT  "resers".* FROM "resers" WHERE "resers"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/resers_controller.rb:87
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering resers/show.html.slim within layouts/application
+  Rendered resers/show.html.slim within layouts/application (3.1ms)
+Completed 200 OK in 36ms (Views: 32.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/resers/35" for 192.168.0.108 at 2019-01-11 14:11:15 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ResersController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mReser Load (0.4ms)[0m  [1m[34mSELECT  "resers".* FROM "resers" WHERE "resers"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/resers_controller.rb:87
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering resers/show.html.slim within layouts/application
+  Rendered resers/show.html.slim within layouts/application (3.1ms)
+Completed 200 OK in 42ms (Views: 37.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/resers/35" for 192.168.0.108 at 2019-01-11 14:12:21 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ResersController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mReser Load (0.6ms)[0m  [1m[34mSELECT  "resers".* FROM "resers" WHERE "resers"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/resers_controller.rb:87
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering resers/show.html.slim within layouts/application
+  Rendered resers/show.html.slim within layouts/application (13.5ms)
+Completed 200 OK in 134ms (Views: 120.2ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/welcome/index" for 192.168.0.108 at 2019-01-11 14:12:26 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.slim within layouts/application
+  Rendered welcome/index.html.slim within layouts/application (7.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.slim:18
+Completed 200 OK in 48ms (Views: 43.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/resers/new" for 192.168.0.108 at 2019-01-11 14:16:32 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ResersController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering resers/new.html.slim within layouts/application
+  Rendered resers/_form.html.slim (32.6ms)
+  Rendered resers/new.html.slim within layouts/application (52.4ms)
+Started GET "/resers/new" for 192.168.0.108 at 2019-01-11 14:16:32 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Completed 200 OK in 127ms (Views: 119.7ms | ActiveRecord: 1.0ms)
+
+
+Processing by ResersController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering resers/new.html.slim within layouts/application
+  Rendered resers/_form.html.slim (8.2ms)
+  Rendered resers/new.html.slim within layouts/application (18.7ms)
+Completed 200 OK in 51ms (Views: 44.1ms | ActiveRecord: 3.7ms)
+
+
+Started POST "/resers" for 192.168.0.108 at 2019-01-11 14:16:37 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ResersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Atojd0O1S2IGsdJl9UQYXbd0iVINjc5U2j5hq8e1/7zX1JIJBPwIwD3UsS4C2H77nP0EfwXRwzs1ctsBqaRtNw==", "reser"=>{"fname"=>"", "lnome"=>"", "email"=>"", "phone"=>"", "address"=>""}, "commit"=>"RESEVAR"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/resers_controller.rb:49
+  [1m[36mReser Create (1.5ms)[0m  [1m[32mINSERT INTO "resers" ("fname", "lnome", "email", "phone", "address", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["fname", ""], ["lnome", ""], ["email", ""], ["phone", ""], ["address", ""], ["created_at", "2019-01-11 16:16:37.367659"], ["updated_at", "2019-01-11 16:16:37.367659"]]
+  ↳ app/controllers/resers_controller.rb:49
+  [1m[35m (100.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/resers_controller.rb:49
+  Rendering emailreserva_mailer/email_reserva.html.slim within layouts/mailer
+  Rendered emailreserva_mailer/email_reserva.html.slim within layouts/mailer (5.7ms)
+EmailreservaMailer#email_reserva: processed outbound mail in 16.2ms
+Sent mail to angelolimadias@gmail.com (75324.6ms)
+Date: Fri, 11 Jan 2019 14:16:37 -0200
+From: forimek@2mailnext.top
+To: angelolimadias@gmail.com
+Message-ID: <5c38c1657887b_4fac2b003be9814c99195@angelo-Aspire-A515-51.mail>
+Subject: contato recebido
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <div><ul><li>nome: </li><li>nome: </li><li>nome: </li><li>nome: </li><li>nome: </li></ul></div>
+  </body>
+</html>
+
+Redirected to http://192.168.0.108:3000/resers/36
+Completed 302 Found in 75470ms (ActiveRecord: 103.5ms)
+
+
+Started GET "/resers/36" for 192.168.0.108 at 2019-01-11 14:17:52 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ResersController#show as HTML
+  Parameters: {"id"=>"36"}
+  [1m[36mReser Load (0.7ms)[0m  [1m[34mSELECT  "resers".* FROM "resers" WHERE "resers"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/resers_controller.rb:87
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering resers/show.html.slim within layouts/application
+  Rendered resers/show.html.slim within layouts/application (14.9ms)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 6.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `stringify_keys' for "/welcome/index":String):
+    3: section class="confirm-reserve"
+    4:   div
+    5:     h1  Reserva Feita com Sucesso!!!
+    6:   div class="btn-reserve"  = link_to 'HOME', welcome_index_path
+    7:       h1 HOME 
+  
+app/views/resers/show.html.slim:6:in `_app_views_resers_show_html_slim__3672684690159292115_70318849227100'
+Started GET "/resers/36" for 192.168.0.108 at 2019-01-11 14:23:54 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ResersController#show as HTML
+  Parameters: {"id"=>"36"}
+  [1m[36mReser Load (1.3ms)[0m  [1m[34mSELECT  "resers".* FROM "resers" WHERE "resers"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/resers_controller.rb:87
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering resers/show.html.slim within layouts/application
+  Rendered resers/show.html.slim within layouts/application (7.3ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 6.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `stringify_keys' for "/welcome/index":String):
+    3: section class="confirm-reserve"
+    4:   div
+    5:     h1  Reserva Feita com Sucesso!!!
+    6:   div class="btn-reserve" = link_to 'HOME', welcome_index_path
+    7:       h1 HOME 
+  
+app/views/resers/show.html.slim:6:in `_app_views_resers_show_html_slim__3672684690159292115_70318903113000'
+Started GET "/resers/36" for 192.168.0.108 at 2019-01-11 14:23:55 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ResersController#show as HTML
+  Parameters: {"id"=>"36"}
+  [1m[36mReser Load (0.7ms)[0m  [1m[34mSELECT  "resers".* FROM "resers" WHERE "resers"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/resers_controller.rb:87
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering resers/show.html.slim within layouts/application
+  Rendered resers/show.html.slim within layouts/application (10.3ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 2.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `stringify_keys' for "/welcome/index":String):
+    3: section class="confirm-reserve"
+    4:   div
+    5:     h1  Reserva Feita com Sucesso!!!
+    6:   div class="btn-reserve" = link_to 'HOME', welcome_index_path
+    7:       h1 HOME 
+  
+app/views/resers/show.html.slim:6:in `_app_views_resers_show_html_slim__3672684690159292115_70318850312420'
+Started GET "/resers/36" for 192.168.0.108 at 2019-01-11 14:23:55 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ResersController#show as HTML
+  Parameters: {"id"=>"36"}
+  [1m[36mReser Load (0.5ms)[0m  [1m[34mSELECT  "resers".* FROM "resers" WHERE "resers"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/resers_controller.rb:87
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering resers/show.html.slim within layouts/application
+  Rendered resers/show.html.slim within layouts/application (6.7ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 5.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `stringify_keys' for "/welcome/index":String):
+    3: section class="confirm-reserve"
+    4:   div
+    5:     h1  Reserva Feita com Sucesso!!!
+    6:   div class="btn-reserve" = link_to 'HOME', welcome_index_path
+    7:       h1 HOME 
+  
+app/views/resers/show.html.slim:6:in `_app_views_resers_show_html_slim__3672684690159292115_70318714724420'
+Started GET "/resers/36" for 192.168.0.108 at 2019-01-11 14:23:55 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ResersController#show as HTML
+  Parameters: {"id"=>"36"}
+  [1m[36mReser Load (0.2ms)[0m  [1m[34mSELECT  "resers".* FROM "resers" WHERE "resers"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/resers_controller.rb:87
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering resers/show.html.slim within layouts/application
+  Rendered resers/show.html.slim within layouts/application (11.8ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `stringify_keys' for "/welcome/index":String):
+    3: section class="confirm-reserve"
+    4:   div
+    5:     h1  Reserva Feita com Sucesso!!!
+    6:   div class="btn-reserve" = link_to 'HOME', welcome_index_path
+    7:       h1 HOME 
+  
+app/views/resers/show.html.slim:6:in `_app_views_resers_show_html_slim__3672684690159292115_70318918073000'
+Started GET "/resers/36" for 192.168.0.108 at 2019-01-11 14:24:18 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ResersController#show as HTML
+  Parameters: {"id"=>"36"}
+  [1m[36mReser Load (0.7ms)[0m  [1m[34mSELECT  "resers".* FROM "resers" WHERE "resers"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/resers_controller.rb:87
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering resers/show.html.slim within layouts/application
+  Rendered resers/show.html.slim within layouts/application (6.7ms)
+Completed 200 OK in 138ms (Views: 125.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/welcome/index" for 192.168.0.108 at 2019-01-11 14:24:21 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.slim within layouts/application
+  Rendered welcome/index.html.slim within layouts/application (4.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.slim:18
+Completed 200 OK in 40ms (Views: 37.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/resers/36" for 192.168.0.108 at 2019-01-11 14:24:58 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ResersController#show as HTML
+  Parameters: {"id"=>"36"}
+  [1m[36mReser Load (1.8ms)[0m  [1m[34mSELECT  "resers".* FROM "resers" WHERE "resers"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/resers_controller.rb:87
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering resers/show.html.slim within layouts/application
+  Rendered resers/show.html.slim within layouts/application (6.3ms)
+Completed 200 OK in 67ms (Views: 53.9ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/resers/36" for 192.168.0.108 at 2019-01-11 14:25:28 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ResersController#show as HTML
+  Parameters: {"id"=>"36"}
+  [1m[36mReser Load (0.3ms)[0m  [1m[34mSELECT  "resers".* FROM "resers" WHERE "resers"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/resers_controller.rb:87
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering resers/show.html.slim within layouts/application
+  Rendered resers/show.html.slim within layouts/application (3.0ms)
+Completed 200 OK in 241ms (Views: 236.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/resers/36" for 192.168.0.108 at 2019-01-11 14:25:30 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ResersController#show as HTML
+  Parameters: {"id"=>"36"}
+  [1m[36mReser Load (0.9ms)[0m  [1m[34mSELECT  "resers".* FROM "resers" WHERE "resers"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/resers_controller.rb:87
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering resers/show.html.slim within layouts/application
+  Rendered resers/show.html.slim within layouts/application (9.1ms)
+Completed 200 OK in 66ms (Views: 54.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/resers/36" for 192.168.0.108 at 2019-01-11 14:25:38 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ResersController#show as HTML
+  Parameters: {"id"=>"36"}
+  [1m[36mReser Load (0.9ms)[0m  [1m[34mSELECT  "resers".* FROM "resers" WHERE "resers"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/resers_controller.rb:87
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering resers/show.html.slim within layouts/application
+  Rendered resers/show.html.slim within layouts/application (11.1ms)
+Completed 200 OK in 96ms (Views: 85.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/resers/36" for 192.168.0.108 at 2019-01-11 14:26:01 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ResersController#show as HTML
+  Parameters: {"id"=>"36"}
+  [1m[36mReser Load (0.6ms)[0m  [1m[34mSELECT  "resers".* FROM "resers" WHERE "resers"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/resers_controller.rb:87
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering resers/show.html.slim within layouts/application
+  Rendered resers/show.html.slim within layouts/application (5.8ms)
+Completed 200 OK in 107ms (Views: 97.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/resers/36" for 192.168.0.108 at 2019-01-11 14:26:09 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ResersController#show as HTML
+  Parameters: {"id"=>"36"}
+  [1m[36mReser Load (0.4ms)[0m  [1m[34mSELECT  "resers".* FROM "resers" WHERE "resers"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/resers_controller.rb:87
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering resers/show.html.slim within layouts/application
+  Rendered resers/show.html.slim within layouts/application (4.2ms)
+Completed 200 OK in 174ms (Views: 166.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/welcome/index" for 192.168.0.108 at 2019-01-11 14:26:11 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.slim within layouts/application
+  Rendered welcome/index.html.slim within layouts/application (14.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.slim:18
+Completed 200 OK in 96ms (Views: 91.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/resers/new" for 192.168.0.108 at 2019-01-11 14:26:13 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ResersController#new as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering resers/new.html.slim within layouts/application
+  Rendered resers/_form.html.slim (15.6ms)
+  Rendered resers/new.html.slim within layouts/application (36.1ms)
+Completed 200 OK in 95ms (Views: 77.3ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/resers" for 192.168.0.108 at 2019-01-11 14:26:17 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ResersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LdZ/rFpY/Uzv1spHHZRvYaPzc5amgZK1j9/jcCMVbav42M7SHRG+7tSzqQzqCAnHiHr+u67dn9pgk1naTQT/IA==", "reser"=>{"fname"=>"", "lnome"=>"", "email"=>"", "phone"=>"", "address"=>""}, "commit"=>"RESEVAR"}
+  [1m[36mUser Load (5.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/resers_controller.rb:49
+  [1m[36mReser Create (4.4ms)[0m  [1m[32mINSERT INTO "resers" ("fname", "lnome", "email", "phone", "address", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["fname", ""], ["lnome", ""], ["email", ""], ["phone", ""], ["address", ""], ["created_at", "2019-01-11 16:26:17.079862"], ["updated_at", "2019-01-11 16:26:17.079862"]]
+  ↳ app/controllers/resers_controller.rb:49
+  [1m[35m (42.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/resers_controller.rb:49
+  Rendering emailreserva_mailer/email_reserva.html.slim within layouts/mailer
+  Rendered emailreserva_mailer/email_reserva.html.slim within layouts/mailer (4.7ms)
+EmailreservaMailer#email_reserva: processed outbound mail in 17.0ms
+Sent mail to angelolimadias@gmail.com (5785.7ms)
+Date: Fri, 11 Jan 2019 14:26:17 -0200
+From: forimek@2mailnext.top
+To: angelolimadias@gmail.com
+Message-ID: <5c38c3a92481c_4fac2b003be9346c9922@angelo-Aspire-A515-51.mail>
+Subject: contato recebido
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <div><ul><li>nome: </li><li>nome: </li><li>nome: </li><li>nome: </li><li>nome: </li></ul></div>
+  </body>
+</html>
+
+Redirected to http://192.168.0.108:3000/resers/37
+Completed 302 Found in 5872ms (ActiveRecord: 52.2ms)
+
+
+Started GET "/resers/37" for 192.168.0.108 at 2019-01-11 14:26:22 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ResersController#show as HTML
+  Parameters: {"id"=>"37"}
+  [1m[36mReser Load (0.7ms)[0m  [1m[34mSELECT  "resers".* FROM "resers" WHERE "resers"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ app/controllers/resers_controller.rb:87
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering resers/show.html.slim within layouts/application
+  Rendered resers/show.html.slim within layouts/application (6.2ms)
+Completed 200 OK in 54ms (Views: 42.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 192.168.0.104 at 2019-01-11 14:28:45 -0200
+Cannot render console from 192.168.0.104! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.slim within layouts/application
+  Rendered welcome/index.html.slim within layouts/application (16.4ms)
+Completed 200 OK in 74ms (Views: 69.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/resers/new" for 192.168.0.104 at 2019-01-11 14:29:02 -0200
+Cannot render console from 192.168.0.104! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ResersController#new as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 192.168.0.104 at 2019-01-11 14:29:02 -0200
+Cannot render console from 192.168.0.104! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.slim within layouts/application
+  Rendered users/shared/_links.html.erb (1.1ms)
+  Rendered users/sessions/new.html.slim within layouts/application (9.1ms)
+Completed 200 OK in 62ms (Views: 58.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 192.168.0.104 at 2019-01-11 14:29:08 -0200
+Cannot render console from 192.168.0.104! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.slim within layouts/application
+  Rendered users/shared/_links.html.erb (1.4ms)
+  Rendered users/registrations/new.html.slim within layouts/application (15.6ms)
+Completed 200 OK in 54ms (Views: 51.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index" for 192.168.0.104 at 2019-01-11 14:29:16 -0200
+Cannot render console from 192.168.0.104! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.slim within layouts/application
+  Rendered welcome/index.html.slim within layouts/application (3.3ms)
+Completed 200 OK in 36ms (Views: 35.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index" for 192.168.0.108 at 2019-01-11 14:29:20 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.slim within layouts/application
+  Rendered welcome/index.html.slim within layouts/application (15.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.slim:18
+Completed 200 OK in 110ms (Views: 106.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/welcome/index" for 192.168.0.108 at 2019-01-11 14:29:36 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.slim within layouts/application
+  Rendered welcome/index.html.slim within layouts/application (14.9ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.slim:18
+Completed 200 OK in 104ms (Views: 100.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/welcome/index" for 192.168.0.104 at 2019-01-11 14:30:27 -0200
+Cannot render console from 192.168.0.104! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.slim within layouts/application
+  Rendered welcome/index.html.slim within layouts/application (11.4ms)
+Completed 200 OK in 320ms (Views: 316.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index" for 192.168.0.104 at 2019-01-11 14:30:32 -0200
+Cannot render console from 192.168.0.104! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.slim within layouts/application
+  Rendered welcome/index.html.slim within layouts/application (13.4ms)
+Completed 200 OK in 55ms (Views: 51.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index" for 192.168.0.108 at 2019-01-11 14:31:04 -0200
+Cannot render console from 192.168.0.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.slim within layouts/application
+  Rendered welcome/index.html.slim within layouts/application (5.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.slim:18
+Completed 200 OK in 195ms (Views: 192.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/welcome/index" for 192.168.0.104 at 2019-01-11 14:31:05 -0200
+Cannot render console from 192.168.0.104! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.slim within layouts/application
+  Rendered welcome/index.html.slim within layouts/application (5.2ms)
+Completed 200 OK in 45ms (Views: 43.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index" for 192.168.0.104 at 2019-01-11 14:34:16 -0200
+Cannot render console from 192.168.0.104! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.slim within layouts/application
+  Rendered welcome/index.html.slim within layouts/application (11.5ms)
+Completed 200 OK in 98ms (Views: 92.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/resers/new" for 192.168.0.104 at 2019-01-11 14:34:23 -0200
+Cannot render console from 192.168.0.104! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ResersController#new as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 192.168.0.104 at 2019-01-11 14:34:23 -0200
+Cannot render console from 192.168.0.104! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.slim within layouts/application
+  Rendered users/shared/_links.html.erb (0.9ms)
+  Rendered users/sessions/new.html.slim within layouts/application (8.2ms)
+Completed 200 OK in 48ms (Views: 44.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 192.168.0.104 at 2019-01-11 14:34:29 -0200
+Cannot render console from 192.168.0.104! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.slim within layouts/application
+  Rendered users/shared/_links.html.erb (1.1ms)
+  Rendered users/registrations/new.html.slim within layouts/application (9.5ms)
+Completed 200 OK in 135ms (Views: 131.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 192.168.0.104 at 2019-01-11 14:34:32 -0200
+Cannot render console from 192.168.0.104! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.slim within layouts/application
+  Rendered users/shared/_links.html.erb (0.7ms)
+  Rendered users/sessions/new.html.slim within layouts/application (6.8ms)
+Completed 200 OK in 38ms (Views: 36.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index" for 192.168.0.104 at 2019-01-11 14:34:36 -0200
+Cannot render console from 192.168.0.104! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.slim within layouts/application
+  Rendered welcome/index.html.slim within layouts/application (8.8ms)
+Completed 200 OK in 52ms (Views: 49.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/resers/new" for 192.168.0.104 at 2019-01-11 14:34:38 -0200
+Cannot render console from 192.168.0.104! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ResersController#new as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 192.168.0.104 at 2019-01-11 14:34:38 -0200
+Cannot render console from 192.168.0.104! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.slim within layouts/application
+  Rendered users/shared/_links.html.erb (1.3ms)
+  Rendered users/sessions/new.html.slim within layouts/application (13.1ms)
+Completed 200 OK in 52ms (Views: 48.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 192.168.0.104 at 2019-01-11 14:34:41 -0200
+Cannot render console from 192.168.0.104! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.slim within layouts/application
+  Rendered users/shared/_links.html.erb (1.7ms)
+  Rendered users/registrations/new.html.slim within layouts/application (19.9ms)
+Completed 200 OK in 67ms (Views: 64.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 192.168.0.104 at 2019-01-11 14:35:05 -0200
+Cannot render console from 192.168.0.104! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZT1TQW5sSeO5fTxrHCoqQJQ/XM8QheB9rGkzUt+2iRAi2nE254NQuODZKQkGnv8nSQDDFHO35ICZ4117V+43EA==", "user"=>{"email"=>"angelolimadias@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"REGISTRAR"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "angelolimadias@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (61.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "angelolimadias@gmail.com"], ["encrypted_password", "$2a$11$6k25wPMoFVZlLitwEPT4AuVPFw2WsNfx5lH150VAy3KOrdx7s9dB."], ["created_at", "2019-01-11 16:35:06.045727"], ["updated_at", "2019-01-11 16:35:06.045727"]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (39.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://192.168.0.108:3000/resers/new
+Completed 302 Found in 331ms (ActiveRecord: 102.1ms)
+
+
+Started GET "/resers/new" for 192.168.0.104 at 2019-01-11 14:35:06 -0200
+Cannot render console from 192.168.0.104! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ResersController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering resers/new.html.slim within layouts/application
+  Rendered resers/_form.html.slim (6.3ms)
+  Rendered resers/new.html.slim within layouts/application (10.7ms)
+Completed 200 OK in 42ms (Views: 38.1ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/resers" for 192.168.0.104 at 2019-01-11 14:35:13 -0200
+Cannot render console from 192.168.0.104! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ResersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lE1KHmaWMlkCXOsOY+A8I7MIkNhKWJBDthyD9Sp4lBynmQ4ijLK3F652W8vmTqGgHeXgl9WubjSBlbS4fDsVcg==", "reser"=>{"fname"=>"", "lnome"=>"", "email"=>"", "phone"=>"", "address"=>""}, "commit"=>"RESEVAR"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/resers_controller.rb:49
+  [1m[36mReser Create (0.4ms)[0m  [1m[32mINSERT INTO "resers" ("fname", "lnome", "email", "phone", "address", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["fname", ""], ["lnome", ""], ["email", ""], ["phone", ""], ["address", ""], ["created_at", "2019-01-11 16:35:13.202594"], ["updated_at", "2019-01-11 16:35:13.202594"]]
+  ↳ app/controllers/resers_controller.rb:49
+  [1m[35m (100.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/resers_controller.rb:49
+  Rendering emailreserva_mailer/email_reserva.html.slim within layouts/mailer
+  Rendered emailreserva_mailer/email_reserva.html.slim within layouts/mailer (5.0ms)
+EmailreservaMailer#email_reserva: processed outbound mail in 14.5ms
+Sent mail to angelolimadias@gmail.com (1901.1ms)
+Date: Fri, 11 Jan 2019 14:35:13 -0200
+From: forimek@2mailnext.top
+To: angelolimadias@gmail.com
+Message-ID: <5c38c5c14e777_4fac2b003be98b609936d@angelo-Aspire-A515-51.mail>
+Subject: contato recebido
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <div><ul><li>nome: </li><li>nome: </li><li>nome: </li><li>nome: </li><li>nome: </li></ul></div>
+  </body>
+</html>
+
+Redirected to http://192.168.0.108:3000/resers/38
+Completed 302 Found in 2026ms (ActiveRecord: 101.6ms)
+
+
+Started GET "/resers/38" for 192.168.0.104 at 2019-01-11 14:35:15 -0200
+Cannot render console from 192.168.0.104! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ResersController#show as HTML
+  Parameters: {"id"=>"38"}
+  [1m[36mReser Load (0.8ms)[0m  [1m[34mSELECT  "resers".* FROM "resers" WHERE "resers"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ app/controllers/resers_controller.rb:87
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/angelo/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering resers/show.html.slim within layouts/application
+  Rendered resers/show.html.slim within layouts/application (4.5ms)
+Completed 200 OK in 45ms (Views: 40.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/welcome/index" for 192.168.0.104 at 2019-01-11 14:35:19 -0200
+Cannot render console from 192.168.0.104! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.slim within layouts/application
+  Rendered welcome/index.html.slim within layouts/application (9.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.slim:18
+Completed 200 OK in 59ms (Views: 55.5ms | ActiveRecord: 0.4ms)
+
+

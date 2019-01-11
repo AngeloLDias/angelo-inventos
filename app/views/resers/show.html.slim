@@ -1,21 +1,7 @@
-p#notice = notice
 
-p
-  strong Fname:
-  = @reser.fname
-p
-  strong Lnome:
-  = @reser.lnome
-p
-  strong Email:
-  = @reser.email
-p
-  strong Phone:
-  = @reser.phone
-p
-  strong Address:
-  = @reser.address
 
-=> link_to 'Edit', edit_reser_path(@reser)
-'|
-=< link_to 'Back', resers_path
+section class="confirm-reserve"
+  div
+    h1 class="text-btn"  Reserva Feita com Sucesso!!!
+  div class="btn-reserve" = link_to welcome_index_path
+      h1 HOME 

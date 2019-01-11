@@ -7,7 +7,6 @@
 }
 
 .welcome {
-    // background-color: rgba($color: #000000, $alpha: 0.4);
     height: 100vh;
     width: 100%;
     display: flex;
@@ -16,30 +15,36 @@
     flex-direction: column;
     background-color: rgba($color: #000000, $alpha: 0.5);
     background-image: url('https://uploaddeimagens.com.br/images/001/825/620/full/CTz0TwM.jpg?1547116593');
-    // background-image: url('../images/CTz0TwM.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 
     .boceco-minion {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
         img {
             width: 250px;
+        }
+
+        h1 {
+
+            font-size: 40px;
+            color: white;
+            margin: 10px 0px;
+            text-shadow: 1px 1px 6px #000;
+            text-align: center;
+
         }
     }
 
     .btn-reserve {
-        // border: 2px solid #fff;
         background-color: #E2001A;
         padding: 20px 32px;
-        // border-radius: 20px;
         cursor: pointer;
         border-radius: 4px;
-
-
-        // &:hover {
-        //     background-color: rgba($color: #fff, $alpha: 0.5);
-        //     transition: 1s;
-        // }
 
         h1 {
             a {
@@ -48,4 +53,18 @@
         }
     }
 }
+@media(max-width: 758px) {
+    .boceco-minion {
+        
 
+        img {
+            width: 247px;
+            margin-top: 44px;
+        }
+
+        h1 {
+
+        }
+    }
+
+}
