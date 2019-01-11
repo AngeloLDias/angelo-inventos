@@ -47,7 +47,13 @@
                     height: 49px;
                     color: white;
                     padding-left: 0px;
+                    cursor: pointer;
+                    &:hover {
+                        background-color: #9c0012;
+                        transition: 0.5s;
+                    }
                 }
+
                 a{
                     color: white !important;
                 }

@@ -46,6 +46,11 @@
         cursor: pointer;
         border-radius: 4px;
 
+        &:hover {
+            background-color: #9c0012;
+            transition: 0.5s;
+        }
+
         h1 {
             a {
                 color: #fff;
@@ -53,17 +58,14 @@
         }
     }
 }
+
 @media(max-width: 758px) {
     .boceco-minion {
-        
+
 
         img {
             width: 247px;
             margin-top: 44px;
-        }
-
-        h1 {
-
         }
     }
 
